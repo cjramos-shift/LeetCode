@@ -10,10 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: action/checkout@main
+    - uses: action/checkout@v4
+    
     - name: test-deploy
     - uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '9.0'
     
+    - name: Build project
     - run: dotnet build TwoSum.csproj
