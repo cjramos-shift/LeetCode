@@ -11,9 +11,9 @@ jobs:
 
     steps:
     - uses: action/checkout@main
-
     - name: test-deploy
     - uses: actions/setup-dotnet@v4
       with:
         dotnet-version: '9.0'
+    
     - run: dotnet build TwoSum.csproj
